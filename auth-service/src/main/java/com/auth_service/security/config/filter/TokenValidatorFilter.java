@@ -1,6 +1,7 @@
 package com.auth_service.security.config.filter;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.auth_service.utils.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TokenValidatorFilter extends OncePerRequestFilter {
 
-    private final com.auth.service.auth_service.utils.JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
 
     private static final List<String> PUBLIC_PATHS = List.of(
             "/v3/api-docs",

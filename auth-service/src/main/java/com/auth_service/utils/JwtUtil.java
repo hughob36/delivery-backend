@@ -1,4 +1,4 @@
-package com.auth.service.auth_service.utils;
+package com.auth_service.utils;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
@@ -63,5 +63,4 @@ public class JwtUtil {
     public Claim getEspecificClaim(DecodedJWT decodedJWT, String claimName) {
         return decodedJWT.getClaim(claimName);
     }
-
 }
